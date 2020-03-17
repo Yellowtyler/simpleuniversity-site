@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Преподаватели</title>
+</head>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+
+<body>
+
+<table border="2" cellpadding="1" cellspacing="1">
+<tr>
+    <th>Имя фамилия</th>
+    <th>Должность</th>
+    <th>Кафедра</th>
+</tr>
+
+    <tr th:each="teacher : ${teachers}">
+
+        <br> <td th:text="${teacher.name}"/>
+        <br><td th:text="${teacher.rank}"/>
+        <br><td th:text="${teacher.kafedra}"/>
+    </tr>
+</table>
+</body>
+</html>

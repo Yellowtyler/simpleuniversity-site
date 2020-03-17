@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+
+<html lang="ru" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Главное меню</title>
+</head>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+
+<body>
+<div class="card" style="width: 18rem;">
+    <img src="https://upload.wikimedia.org/wikipedia/ru/thumb/2/2d/MIREA_Logo.svg/1200px-MIREA_Logo.svg.png" class="card-img-top" width="100" height="100" >
+    <div class="card-body">
+        <h5 class="card-title" ></h5>
+       <p class="card-text"></p>
+
+    </div>
+</div>
+    <h2 th:text="${welcome}">Welcome</h2>
+
+
+<menu>
+    <li>
+        <a href="schedule">Расписание</a>
+    </li>
+
+    <li>
+        <a href="teacher" >Преподаватели</a>
+    </li>
+
+    <li>
+        <a href="" >Контактры</a>
+    </li>
+</menu>
+
+
+</body>
+</html>

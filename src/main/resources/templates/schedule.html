@@ -1,0 +1,58 @@
+
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Узнать расписание</title>
+</head>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+
+<body>
+<form method="post" name="comment_form" id="comment_form" action="schedule" role="form">
+
+    <P>Группа:</P>
+    <input type="text" name="group" ></input><br>
+    <P>День недели:</P>
+    <input type="text" name="day" /><br>
+    <p>Номер пары:</p>
+    <input type="text" name="time" /><br>
+    <p> </p>
+    <button type="submit" id="submit">Найти</button>
+</form>
+<p th:text="${error}"></p>
+
+<table cellspacing="1" cellpadding="2" border="2">
+
+    <tr>
+        <th>Группа</th>
+        <th>Название предмета</th>
+        <th>Пара</th>
+        <th>День недели</th>
+        <th>Неделя</th>
+        <th>Вид пары</th>
+        <th>Номер аудитории</th>
+        <th>Преподаватель</th>
+    </tr>
+
+
+    <tr th:each="schedule:${schedules}">
+        <td th:text="${schedule.gr}"></td>
+        <td th:text="${schedule.name}"></td>
+        <td th:text="${schedule.time}"></td>
+        <td th:text="${schedule.day}"></td>
+        <td th:text="${schedule.week}"></td>
+        <td th:text="${schedule.type}"></td>
+        <td th:text="${schedule.aud}"></td>
+        <td th:text="${schedule.teacher.name}"></td>
+
+
+    </tr>
+
+
+
+</table>
+
+
+</body>
+</html>
